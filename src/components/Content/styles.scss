@@ -9,6 +9,8 @@
 
 .textM {
   display: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .titulo-content {
