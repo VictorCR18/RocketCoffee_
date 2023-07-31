@@ -12,7 +12,8 @@
   font-family: "Manrope", sans-serif;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #000000;
@@ -29,6 +30,7 @@ html, body {
   left: 0px;
   position: fixed;
   pointer-events: none;
+  user-select: none;
 }
 
 #blur2 {
@@ -40,10 +42,11 @@ html, body {
   right: 0px;
   position: fixed;
   pointer-events: none;
+  user-select: none;
 }
 
 @media (max-width: 940px) {
-  #blur2{
+  #blur2 {
     display: none;
   }
 }

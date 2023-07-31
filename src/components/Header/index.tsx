@@ -1,10 +1,11 @@
 import * as Dialog from "@radix-ui/react-dialog";
 
-import Close from "../../assets/menu-buguer-close.svg"
+import Close from "../../assets/menu-buguer-close.svg";
 import LogoD from "../../assets/logo-desktop.svg";
 import LogoM from "../../assets/logo-mobile.svg";
 
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const Modal = () => (
@@ -19,7 +20,6 @@ export function Header() {
         <Dialog.Overlay className="DialogOverlay" />
         <Dialog.Content className="DialogContent">
           <Dialog.Title className="DialogTitle">
-            {" "}
             <div className="logoModal">
               <img className="union" src={LogoM} />
               <Dialog.Close asChild>
@@ -31,21 +31,31 @@ export function Header() {
           </Dialog.Title>
           <Dialog.Description className="DialogDescription">
             <div className="navbar-modal">
-              <a href="/" className="label-header">
-                Home
-              </a>
-              <a href="/" className="label-header">
-                Menu
-              </a>
-              <a href="/" className="label-header">
-                Recompensas
-              </a>
-              <a href="/" className="label-header">
-                Gift Cards
-              </a>
-              <a href="/" className="label-header">
-                Lojas
-              </a>
+              <Dialog.Close asChild>
+                <Link to="/" className="label-header">
+                  Home
+                </Link>
+              </Dialog.Close>
+              <Dialog.Close asChild>
+                <Link to="/menu" className="label-header">
+                  Menu
+                </Link>
+              </Dialog.Close>
+              <Dialog.Close asChild>
+                <Link to="/" className="label-header">
+                  Recompensas
+                </Link>
+              </Dialog.Close>
+              <Dialog.Close asChild>
+                <Link to="/" className="label-header">
+                  Gift Cards
+                </Link>
+              </Dialog.Close>
+              <Dialog.Close asChild>
+                <Link to="/" className="label-header">
+                  Lojas
+                </Link>
+              </Dialog.Close>
             </div>
           </Dialog.Description>
         </Dialog.Content>
@@ -66,14 +76,14 @@ export function Header() {
           <img className="logoD" src={LogoD} />
         </div>
         <div className="links-header">
-          <a href="/">Home</a>
-          <a href="/">Menu</a>
-          <a href="/">Recompensas</a>
-          <a href="/">Gift Cards</a>
-          <a href="/">Lojas</a>
+          <Link to="/">Home</Link>
+          <Link to="/menu">Menu</Link>
+          <Link to="/">Recompensas</Link>
+          <Link to="/">Gift Cards</Link>
+          <Link to="/">Lojas</Link>
         </div>
         <div className="button-header">
-          <a href="/">PEGAR MEU CAFÉ</a>
+          <Link to="/">PEGAR MEU CAFÉ</Link>
         </div>
       </nav>
     </div>
